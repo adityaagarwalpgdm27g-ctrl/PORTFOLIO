@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aditya Agarwal · Marketing, research and consumer insight</title>
+<meta name="description" content="Aditya Agarwal, PGDM Marketing at Great Lakes Gurgaon. Field market research, consumer insight, B2B go-to-market and digital marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+:root{
+  --paper:#FFFFFF; --paper-2:#F5F5F2; --card:#FFFFFF; --ink:#0E0F12; --soft:#3E424D; --muted:#6B6F7B; --line:#E6E6E1;
+  --indigo:#0B1F44; --indigo-2:#2B4C8C; --indigo-soft:#E9EDF5; --marigold:#C9A24A; --marigold-soft:#F6EEDA; --rose:#FF4A1C; --rose-soft:#FFE7DF; --green:#1F7A55;
+  --navy:#0B1F44; --black:#0A0A0B; --accent:#FF4A1C; --gold:#D4AF5A;
+  --display:'Inter Tight','Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  --body:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  --read:'Newsreader',Georgia,'Times New Roman',serif;
+  --r-lg:18px; --r-md:12px;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --paper:#0F1115; --paper-2:#15181E; --card:#181B22; --ink:#F2F3F5; --soft:#C5C8D0; --muted:#9A9EAA; --line:#2A2E37; --indigo:#9DB4E8; --indigo-2:#7E9BDB; --indigo-soft:#1D2533; --marigold:#D4AF5A; --marigold-soft:#2E2818; --rose:#FF6A43; --rose-soft:#3A1F17; --green:#5CC79A; } }
+:root[data-theme="dark"]{ --paper:#0F1115; --paper-2:#15181E; --card:#181B22; --ink:#F2F3F5; --soft:#C5C8D0; --muted:#9A9EAA; --line:#2A2E37; --indigo:#9DB4E8; --indigo-2:#7E9BDB; --indigo-soft:#1D2533; --marigold:#D4AF5A; --marigold-soft:#2E2818; --rose:#FF6A43; --rose-soft:#3A1F17; --green:#5CC79A; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px} a:hover{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+h1,h2,h3,h4{margin:0;line-height:1.04;letter-spacing:-0.03em;font-family:var(--display)}
+p{margin:0 0 1em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{font-family:var(--display);font-weight:800;font-size:19px;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px;letter-spacing:-0.02em}
+.brand i{width:32px;height:32px;border-radius:8px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:800;letter-spacing:0}
+.nav{display:flex;gap:2px}
+.nav button{background:none;border:0;padding:8px 14px;border-radius:999px;color:var(--soft);cursor:pointer;font-weight:500;font-size:15px}
+.nav button:hover{color:var(--ink);background:var(--paper-2)}
+.pills{display:flex;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;color:var(--ink);font-weight:600;font-size:14.5px;cursor:pointer}
+.pill:hover{border-color:var(--ink);color:var(--ink)}
+.pill.dark{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.pill.dark:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+svg.ic{width:16px;height:16px;flex:none}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;background:var(--accent);color:#fff;font-family:var(--body)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* hero */
+.hero{padding:72px 0 64px;background:var(--paper)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:64px;align-items:center}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-weight:500;color:var(--soft);margin-bottom:26px;padding:7px 14px 7px 10px;border:1px solid var(--line);border-radius:999px;font-size:14.5px}
+.live{width:8px;height:8px;border-radius:50%;background:#22A06B;box-shadow:0 0 0 4px rgba(34,160,107,.18)}
+.hero h1{font-size:clamp(46px,6.4vw,88px);font-weight:800}
+.hero .lede{font-size:19.5px;color:var(--soft);max-width:40ch;margin-top:24px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.trust{display:flex;gap:28px;flex-wrap:wrap;align-items:center;margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
+.trust small{color:var(--muted);font-size:13.5px;width:100%;margin-bottom:-14px}
+.trust b{font-family:var(--display);font-size:20px;font-weight:700;color:var(--soft);letter-spacing:-0.02em}
+.portrait{position:relative;justify-self:end;width:min(390px,100%)}
+.portrait::before{content:"";position:absolute;inset:26px -26px -26px 26px;background:var(--navy);border-radius:24px}
+.portrait::after{content:"";position:absolute;right:-26px;top:26px;width:96px;height:6px;background:var(--gold);border-radius:3px}
+.portrait .frame{position:relative;border-radius:24px;overflow:hidden;background:#E8E8E8;aspect-ratio:4/5}
+.portrait .frame img{width:100%;height:100%;object-fit:cover}
+.portrait .cap{position:absolute;left:-22px;bottom:36px;background:var(--card);color:var(--ink);border-radius:14px;padding:12px 16px;font-size:13.5px;line-height:1.35;box-shadow:0 18px 40px -16px rgba(10,10,20,.35);border:1px solid var(--line)}
+.portrait .cap b{display:block;font-size:15px;font-family:var(--display)}
+
+/* dashboard (navy + gold) */
+.dash{padding:80px 0;background:var(--navy);color:#fff}
+.dash-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+.dash-head h2{font-size:clamp(32px,4vw,48px);font-weight:800;color:#fff}
+.dash-head p{margin:0;color:#AFC0E0;font-size:15px}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tile{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column;gap:12px;min-height:188px}
+.tile .t{color:var(--gold);font-size:13.5px;font-weight:600}
+.tile .n{font-family:var(--display);font-size:48px;font-weight:800;letter-spacing:-0.04em;line-height:1;color:#fff}
+.tile .n small{font-size:17px;font-weight:600;color:#AFC0E0;letter-spacing:0;margin-left:6px}
+.tile .s{font-size:14px;color:#C9D4EA;line-height:1.4;margin-top:auto}
+.mini{display:flex;align-items:end;gap:4px;height:40px}
+.mini i{flex:1;background:rgba(255,255,255,.16);border-radius:3px 3px 1px 1px}
+.mini i.on{background:#fff} .mini i.gold{background:var(--gold)}
+.track{height:10px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden;display:flex}
+.track i{display:block;height:100%}
+.dash .track i[style*="--indigo)"]{background:#fff!important}
+.legend{display:flex;gap:14px;font-size:12.5px;color:#AFC0E0;flex-wrap:wrap}
+.legend span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;background:var(--c)}
+.dash .legend span[style*="--indigo)"]::before{background:#fff}
+.dash .legend span[style*="--indigo-soft)"]::before{background:rgba(255,255,255,.16)}
+.dash .legend span[style*="--marigold)"]::before,.dash .track i[style*="--marigold)"]{background:var(--gold)!important}
+
+/* ticker (black) */
+.ticker{background:var(--black);color:#fff;overflow:hidden;white-space:nowrap;border-top:1px solid #1E1E22}
+.ticker .row{display:inline-flex;gap:40px;padding:20px 0;animation:tick 42s linear infinite;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-0.01em}
+.ticker .row span::after{content:"●";color:var(--accent);margin-left:40px;font-size:10px;vertical-align:5px}
+.ticker:hover .row{animation-play-state:paused}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* work (black, bold) */
+#work{background:var(--black);color:#fff}
+.work-intro{padding:90px 32px 24px}
+.work-intro h2{font-size:clamp(64px,11vw,168px);font-weight:800;letter-spacing:-0.055em;line-height:.88;color:#fff}
+.work-intro p{max-width:46ch;color:#A9ABB3;font-size:19px;margin-top:20px}
+.hscroll{position:relative}
+.hscroll .sticky{position:sticky;top:68px;height:calc(100vh - 68px);overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.hscroll .track-x{display:flex;will-change:transform}
+.slide{flex:0 0 100vw;padding:0 max(32px,calc((100vw - 1200px)/2 + 32px))}
+.slide-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.slide .idx{color:var(--gold);font-weight:600;margin-bottom:16px;font-size:14.5px}
+.slide h3{font-size:clamp(34px,4vw,56px);font-weight:800;margin-bottom:18px;color:#fff}
+.slide p.sum{color:#B7B9C0;font-size:17.5px;max-width:46ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+.chip{padding:7px 13px;border-radius:999px;background:var(--paper-2);border:1px solid var(--line);font-size:13.5px;font-weight:500;color:var(--ink)}
+.chip b{color:var(--accent);font-weight:700}
+#work .chip{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:#E6E7EA}
+#work .chip b{color:var(--gold)}
+#work .btn:hover{background:#fff;color:var(--black)}
+.viz{background:#fff;color:#0E0F12;border-radius:var(--r-lg);padding:26px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.viz h4{font-size:14px;font-weight:600;color:#6B6F7B;margin-bottom:16px;letter-spacing:0;font-family:var(--body)}
+.bars{display:grid;gap:9px}
+.bar{display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:12px;align-items:center;font-size:14px}
+.bar i{display:block;height:12px;border-radius:6px;background:var(--navy);width:var(--w)}
+.bar.gold i{background:var(--gold)} .bar.rose i{background:var(--accent)}
+.exhibit .bar i{background:var(--indigo)} .exhibit .bar.gold i{background:var(--gold)} .exhibit .bar.rose i{background:var(--accent)}
+.bar em{font-style:normal;font-weight:700;text-align:right}
+:root[data-theme="dark"] .exhibit .bar i:not(.x){}
+.shot{border-radius:10px;overflow:hidden;border:1px solid #E6E6E1}
+.progress{display:flex;gap:6px;justify-content:center;margin-top:30px}
+.progress i{width:30px;height:3px;border-radius:2px;background:rgba(255,255,255,.2)}
+.progress i.on{background:var(--accent)}
+
+/* sections (white / off-white) */
+.sec{padding:100px 0}
+.sec.alt{background:var(--paper-2)}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}
+.sec-h h2{font-size:clamp(38px,5vw,60px);font-weight:800}
+.sec-h p{max-width:44ch;color:var(--soft);margin:0}
+.xp{display:grid;grid-template-columns:180px minmax(0,1fr) minmax(0,.8fr);gap:36px;padding:36px 0;border-top:1px solid var(--line)}
+.xp:last-child{border-bottom:1px solid var(--line)}
+.xp .when{color:var(--muted);font-weight:600;font-size:15px}
+.xp h3{font-size:30px;font-weight:800}
+.xp .role{color:var(--accent);font-weight:600;margin:6px 0 14px}
+.xp ul{margin:0;padding-left:20px;color:var(--soft)} .xp li{margin-bottom:6px}
+.feat{background:var(--navy);border-radius:var(--r-md);padding:22px;align-self:start;text-decoration:none;color:#fff;display:block;position:relative;overflow:hidden}
+.feat::after{content:"";position:absolute;left:22px;top:0;width:48px;height:4px;background:var(--gold)}
+.feat:hover{background:#0F2A5C;color:#fff}
+.feat small{color:var(--gold);font-weight:600}
+.feat b{display:block;font-family:var(--display);font-size:20px;margin:8px 0;letter-spacing:-0.02em}
+.feat span{color:#C9D4EA;font-size:14.5px}
+
+.caps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.cap-b{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:24px}
+.cap-b h3{font-size:20px;font-weight:700;margin-bottom:12px;padding-bottom:12px;border-bottom:2px solid var(--accent);display:inline-block}
+.cap-b:nth-child(2) h3{border-color:var(--gold)} .cap-b:nth-child(3) h3{border-color:var(--navy)} .cap-b:nth-child(4) h3{border-color:var(--ink)}
+.cap-b ul{margin:0;padding-left:18px;color:var(--soft);font-size:15px} .cap-b li{margin-bottom:6px}
+.kit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:44px}
+.kit h3{font-size:17px;font-weight:700;margin-bottom:12px}
+.kit .chips{margin:0}
+
+.rec{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.rec .col{border-top:3px solid var(--ink);padding-top:18px}
+.rec .col:nth-child(2){border-color:var(--gold)} .rec .col:nth-child(3){border-color:var(--accent)} .rec .col:nth-child(4){border-color:var(--navy)}
+.rec h3{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:12px;letter-spacing:0;font-family:var(--body)}
+.rec dl{margin:0} .rec dt{font-weight:700;font-family:var(--display)} .rec dd{margin:2px 0 14px;color:var(--soft);font-size:14.5px}
+
+.about{background:var(--navy);color:#fff}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:64px;align-items:center}
+.about h2{font-size:clamp(38px,5vw,60px);font-weight:800;color:#fff;margin-bottom:24px}
+.about p{font-family:var(--read);font-size:21px;line-height:1.6;color:#D6DEEE}
+.about .fun{display:grid;gap:12px}
+.about .fun div{border-left:3px solid var(--gold);padding:6px 0 6px 18px}
+.about .fun b{display:block;color:var(--gold);font-size:16px;margin-bottom:2px;font-family:var(--display)}
+.about .fun span{color:#D6DEEE;font-size:15.5px}
+
+.contact{padding:120px 0 90px;background:var(--black);color:#fff}
+.contact h2{font-size:clamp(50px,8.5vw,128px);font-weight:800;letter-spacing:-0.055em;line-height:.9;color:#fff;max-width:14ch}
+.contact p.big{font-size:20px;color:#A9ABB3;max-width:44ch;margin:24px 0 36px}
+.ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.way{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md);padding:20px;text-decoration:none;color:#fff;display:flex;flex-direction:column;gap:6px;cursor:pointer;text-align:left}
+.way:hover{border-color:var(--accent);color:#fff;background:rgba(255,74,28,.08)}
+.way small{color:var(--gold);font-weight:600}
+.way b{font-size:15.5px;word-break:break-word;font-weight:600}
+footer{background:var(--black);color:#8E9099;padding:26px 0 40px;border-top:1px solid #1E1E22}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}
+footer .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #2A2A30;border-radius:999px;padding:6px 12px;color:#C9CBD2}
+
+/* case pages */
+.case-top{padding:56px 0 44px;background:var(--navy);color:#fff}
+.back{display:inline-flex;gap:6px;align-items:center;color:#AFC0E0;text-decoration:none;font-weight:500;margin-bottom:28px;background:none;border:0;cursor:pointer;padding:0;font-size:15px}
+.back:hover{color:#fff}
+.case-top .kind{color:var(--gold);font-weight:600;margin-bottom:16px;font-size:15px}
+.case-top h1{font-size:clamp(40px,5.6vw,76px);font-weight:800;max-width:18ch;color:#fff}
+.case-top .dek{font-family:var(--read);font-size:22px;line-height:1.5;color:#D6DEEE;max-width:54ch;margin-top:22px}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.16)}
+.meta div small{display:block;color:var(--gold);font-weight:600;font-size:13px}
+.meta div b{font-weight:600;font-size:15.5px;color:#fff}
+.case-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.case-top .btn.ghost{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5)}
+.case-top .btn.ghost:hover{background:#fff;color:var(--navy)}
+.case-top .btn:hover{background:#fff;color:var(--navy)}
+.case-body{display:grid;grid-template-columns:220px minmax(0,1fr);gap:60px;padding:56px 0 90px}
+.toc{position:sticky;top:100px;align-self:start;display:flex;flex-direction:column;gap:2px;font-size:14.5px}
+.toc a{color:var(--muted);text-decoration:none;padding:7px 12px;border-left:2px solid var(--line)}
+.toc a:hover{color:var(--ink)} .toc a.on{color:var(--ink);border-color:var(--accent);font-weight:600}
+.read{max-width:740px;min-width:0}
+.read section{padding-top:8px;margin-bottom:48px}
+.read h2{font-size:32px;font-weight:800;margin-bottom:18px}
+.read h3{font-size:21px;font-weight:700;margin:28px 0 10px}
+.read p,.read li{font-family:var(--read);font-size:20px;line-height:1.7;color:var(--ink)}
+.read ul,.read ol{padding-left:22px} .read li{margin-bottom:8px}
+.read blockquote{margin:28px 0;padding:18px 24px;border-left:4px solid var(--accent);background:var(--paper-2);border-radius:0 12px 12px 0;font-family:var(--read);font-style:italic;font-size:24px;line-height:1.45}
+.read blockquote cite{display:block;font-style:normal;font-family:var(--body);font-size:14px;color:var(--muted);margin-top:8px}
+.note{background:var(--marigold-soft);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:18px 20px;font-size:15px;color:var(--soft);margin:0 0 36px}
+.note b{color:var(--ink)}
+.exhibit{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:24px;margin:28px 0;font-family:var(--body)}
+.exhibit .cap{font-weight:700;font-size:15.5px;margin-bottom:4px;font-family:var(--display)}
+.exhibit .src{font-size:13px;color:var(--muted);margin-top:14px}
+.exhibit .sub{font-size:13.5px;color:var(--muted);margin-bottom:16px}
+.exhibit table{width:100%;border-collapse:collapse;font-size:14.5px}
+.exhibit th{text-align:left;font-weight:600;padding:9px 10px;background:var(--navy);color:#fff}
+.exhibit th:first-child{border-radius:8px 0 0 0} .exhibit th:last-child{border-radius:0 8px 0 0}
+.exhibit td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl-wrap{overflow-x:auto}
+.timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.timeline div{border-top:3px solid var(--navy);padding-top:10px;font-size:14px}
+.timeline div:nth-child(3),.timeline div:nth-child(4){border-color:var(--accent)}
+.timeline div:nth-child(5){border-color:var(--gold)}
+.timeline b{display:block;font-size:13px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{border-radius:10px;padding:14px 16px;background:var(--paper-2);font-size:14.5px}
+.box b{display:block;margin-bottom:6px;font-family:var(--display)}
+.box ul{margin:0;padding-left:18px} .box li{font-family:var(--body);font-size:14.5px;line-height:1.45;margin-bottom:4px}
+.qs li{font-family:var(--body)!important;font-size:17.5px!important}
+.dash-view{display:grid;gap:14px}
+.dash-view button{padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);cursor:zoom-in}
+.next{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:36px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.next small{color:var(--muted);font-weight:600;display:block}
+.next b{font-family:var(--display);font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-0.03em}
+.next:hover b{color:var(--accent)}
+
+/* lightbox + ask */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(5,6,10,.85);display:flex;align-items:center;justify-content:center;padding:20px}
+.lb[hidden]{display:none}
+.lb .in{max-width:min(1100px,96vw);max-height:92vh;overflow:auto;background:var(--card);border-radius:16px;padding:14px}
+.lb .bar-t{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.lb .bar-t b{font-size:16px}
+.lb .x{background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;font-weight:600}
+.ask-btn{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:12px 18px;font-weight:600;cursor:pointer;box-shadow:0 14px 30px -10px rgba(255,74,28,.55)}
+.ask-btn:hover{background:var(--ink);color:var(--paper)}
+.ask{position:fixed;right:20px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;width:min(380px,calc(100vw - 40px));max-height:min(560px,calc(100vh - 140px));background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45);display:flex;flex-direction:column;overflow:hidden}
+.ask[hidden]{display:none}
+.ask header{padding:16px 18px;background:var(--navy);color:#fff}
+.ask header b{display:block;font-family:var(--display)} .ask header small{color:var(--gold)}
+.ask .log{padding:14px 16px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;flex:1}
+.msg{padding:10px 13px;border-radius:14px;font-size:14.5px;line-height:1.45;max-width:90%}
+.msg.me{align-self:end;background:var(--ink);color:var(--paper);border-bottom-right-radius:4px}
+.msg.bot{align-self:start;background:var(--paper-2);border-bottom-left-radius:4px}
+.msg.bot a{font-weight:600;color:var(--accent)}
+.sugg{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+.sugg button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 10px;font-size:13px;cursor:pointer}
+.sugg button:hover{border-color:var(--accent);color:var(--accent)}
+.ask form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.ask input{flex:1;min-width:0;border:1px solid var(--line);background:var(--paper-2);color:var(--ink);border-radius:999px;padding:10px 14px;font:inherit;font-size:14.5px}
+.ask form button{border:0;background:var(--accent);color:#fff;border-radius:999px;padding:0 16px;font-weight:600;cursor:pointer}
+
+@media (prefers-reduced-motion: reduce){ .ticker .row{animation:none} }
+@media (max-width:980px){
+  .nav{display:none}
+  .sec-h,.dash-head{flex-direction:column;align-items:flex-start}
+  .hero .wrap,.slide-in,.about .wrap{grid-template-columns:1fr}
+  .portrait{justify-self:center;margin:20px 26px 26px 0}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .caps,.rec{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kit{grid-template-columns:1fr}
+  .xp{grid-template-columns:1fr;gap:10px}
+  .ways{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .case-body{grid-template-columns:minmax(0,1fr)}
+  .toc{display:none}
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .timeline{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 20px} .work-intro{padding:70px 20px 20px}
+  .tiles,.caps,.rec,.ways,.grid2{grid-template-columns:1fr}
+  .pills .pill.hide-s{display:none}
+  .bar{grid-template-columns:104px minmax(0,1fr) 46px}
+  .read p,.read li{font-size:18.5px}
+  .portrait .cap{left:12px}
+}
+.hscroll.stack .sticky{position:static;height:auto;overflow:visible;display:block}
+.hscroll.stack .track-x{flex-direction:column;gap:80px;transform:none!important;padding-bottom:90px}
+.hscroll.stack .slide{flex:none;padding:0 20px;max-width:1200px;margin:0 auto;width:100%}
+.hscroll.stack .progress{display:none}
+@media print{
+  .top,.ask-btn,.ask,.toc,.case-actions,.next,footer,.back{display:none!important}
+  body{background:#fff;color:#000} .case-top{background:#fff;color:#000} .case-top h1,.case-top .dek,.meta div b{color:#000} .case-body{display:block} .exhibit{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#/" aria-label="Aditya Agarwal, home"><i aria-hidden="true">AA</i>Aditya Agarwal</a>
+    <nav class="nav" aria-label="Sections">
+      <button data-go="work">Work</button><button data-go="experience">Experience</button><button data-go="about">About</button><button data-go="contact">Contact</button>
+    </nav>
+    <div class="pills">
+      <a class="pill hide-s" href="https://www.linkedin.com/in/aditya-agarwal-92b1a42a9" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm7 0h3.8v1.5h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12v5.43h-4v-4.82c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.9h-4v-11Z"/></svg>LinkedIn</a>
+      <button class="pill dark" data-resume>Resume</button>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="in"><div class="bar-t"><b id="lb-title"></b><div style="display:flex;gap:8px" id="lb-actions"></div></div><div id="lb-body"></div></div>
+</div>
+
+<button class="ask-btn" id="ask-btn" aria-expanded="false" aria-controls="ask"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>Ask about me</button>
+<section class="ask" id="ask" hidden aria-label="Ask about Aditya">
+  <header><b>Ask about Aditya</b><small>Quick answers from this portfolio</small></header>
+  <div class="log" id="ask-log" aria-live="polite"></div>
+  <div class="sugg" id="ask-sugg"></div>
+  <form id="ask-form"><label class="sr" for="ask-in">Your question</label><input id="ask-in" placeholder="e.g. What did you find at Häfele?" autocomplete="off"><button type="submit">Ask</button></form>
+</section>
+
+<script>
+(function(){
+'use strict';
+var A = {
+  photo:'assets/aditya.jpg', gharfix:'assets/gharfix.jpg', boat:'assets/boat.jpg',
+  d1:'assets/hafele-dashboard-1.jpg', d2:'assets/hafele-dashboard-2.jpg', d3:'assets/hafele-dashboard-3.jpg',
+  resumeImg:'assets/resume-1.jpg', resumePdf:'assets/Aditya_Agarwal_Resume.pdf', dashPdf:'assets/Hafele_Story_Dashboard_Aditya_Agarwal.pdf'
+};
+var L = { boat:'boat/', gharfix:'gharfix/', linkedin:'https://www.linkedin.com/in/aditya-agarwal-92b1a42a9', email:'adityaagarwal.pgdm27g@greatlakes.edu.in', phone:'+91 63785 46610', tel:'+916378546610', pdfs:true };
+var $=function(s,el){return (el||document).querySelector(s)}, $$=function(s,el){return Array.prototype.slice.call((el||document).querySelectorAll(s))};
+var ext=' target="_blank" rel="noopener"';
+
+function bars(rows,max,cls){ return '<div class="bars">'+rows.map(function(r){ return '<div class="bar '+(r[3]||cls||'')+'"><span>'+r[0]+'</span><i style="--w:'+Math.max(3,Math.round(r[1]/max*100))+'%"></i><em>'+(r[2]||r[1])+'</em></div>'; }).join('')+'</div>'; }
+var CLUSTERS=[['Sultanpur & DLF',50],['MG Road / Ghitorni',45],['Rohtak',40],['M3M Urbana',13],['Hisar',11],['Other NCR',10],['Rewari',10],['IMT Manesar',8],['Bhiwani',6]];
+var SPEND=[['Account A, Rohtak',27.5,'25–30'],['Account B, Ghitorni',16,'15–17'],['Account C, Rewari',11,'10–12'],['Account D, Rohtak',9,'8–10'],['Account E, Rohtak',7.5,'7–8'],['Account F, Ghitorni',5.5,'5–6'],['Account G, Ghitorni',5,'~5'],['Account H, Ghitorni',2,'~2']];
+var BARRIERS=[['Price',4.17],['Availability',4.15],['Online comparison',4.12],['Discount / offer',3.66],['Brand confidence',3.46],['Staff behaviour',3.15],['Waiting time',2.83],['Store environment',2.78]];
+var TRUST=[['Friends / family',5.32],['Brand website',5.29],['Comparison apps',4.78],['Phone reviews',4.73],['Product display',4.68],['Salesperson',3.83,null,'rose']];
+
+/* ---------------- HOME ---------------- */
+function home(){
+  var tiles = [
+    {t:'Firms mapped for Häfele',n:'193',s:'Across 9 market clusters in Delhi NCR and Haryana',v:'<div class="mini">'+CLUSTERS.map(function(c,i){return '<i class="'+(i<3?'on':'')+'" style="height:'+Math.round(c[1]/50*100)+'%"></i>';}).join('')+'</div>'},
+    {t:'Owners met in person',n:'~140',s:'Shop by shop; the rest by phone and account lists',v:'<div class="track" aria-hidden="true"><i style="width:73%;background:var(--indigo)"></i></div><div class="legend"><span style="--c:var(--indigo)">In person</span><span style="--c:var(--indigo-soft)">Phone and lists</span></div>'},
+    {t:'Under-served monthly spend',n:'₹80L',s:'In 8 accounts buying mostly from rivals',v:'<div class="mini">'+SPEND.map(function(s){return '<i class="gold" style="height:'+Math.round(s[1]/27.5*100)+'%"></i>';}).join('')+'</div>'},
+    {t:'Sales pipeline built',n:'58<small>accounts</small>',s:'New and prospect accounts, ready for follow-up',v:'<div class="track" aria-hidden="true"><i style="width:50%;background:var(--indigo)"></i><i style="width:50%;background:var(--marigold)"></i></div><div class="legend"><span style="--c:var(--indigo)">29 new</span><span style="--c:var(--marigold)">29 prospects</span></div>'},
+    {t:'Leads at TIME',n:'175',s:'Qualified leads, 30% of them enrolled',v:'<div class="track" aria-hidden="true"><i style="width:30%;background:var(--green)"></i></div><div class="legend"><span style="--c:var(--green)">Enrolled</span><span style="--c:var(--indigo-soft)">Qualified</span></div>'},
+    {t:'boAt campaigns analysed',n:'16',s:'Each with a clear call: scale, renew, keep, review, cut or investigate',v:'<div class="track" aria-hidden="true"><i style="width:19%;background:var(--green)"></i><i style="width:25%;background:var(--indigo)"></i><i style="width:19%;background:var(--indigo-2)"></i><i style="width:19%;background:var(--marigold)"></i><i style="width:12%;background:var(--rose)"></i><i style="width:6%;background:var(--muted)"></i></div><div class="legend"><span style="--c:var(--green)">Scale 3</span><span style="--c:var(--indigo)">Renew 4</span><span style="--c:var(--rose)">Cut 2</span></div>'}
+  ];
+  var slides = [
+    {id:'hafele',idx:'Internship, Häfele India',t:'Customers asked for Häfele. The channel didn’t deliver.',s:'Ten weeks in the field across 193 firms showed strong brand demand blocked by price, missing support, dealer undercutting, and a rival’s rumour after a rule change.',c:['<b>193</b> firms','<b>₹80L</b>/month found','<b>58</b>-account pipeline'],v:'<div class="viz"><h4>How often each rival came up in my field notes</h4>'+bars([['Hettich',80,'~80','rose'],['Blum',30,'~30'],['Ozone',10,'~10']],80)+'<h4 style="margin-top:22px">Firms mapped per cluster</h4>'+bars(CLUSTERS.slice(0,5),50)+'</div>'},
+    {id:'consumer-behaviour',idx:'Research project, Consumer Behaviour',t:'Why shoppers walk in and leave without buying',s:'A mixed-method study of offline retail: 41 survey responses, 20 interviews, thematic coding and non-parametric tests in Python.',c:['<b>41</b> responses','<b>20</b> interviews','Salesperson trusted <b>least</b>'],v:'<div class="viz"><h4>Why people left (average, 1–7 scale)</h4>'+bars(BARRIERS.map(function(b,i){return [b[0],b[1],b[1].toFixed(2),i<3?'gold':''];}),4.17)+'</div>'},
+    {id:'boat',idx:'Analytics project, Marketing & Retail Analytics',t:'A decision system for boAt’s marketing spend',s:'A live dashboard where every screen ends in a decision, with a data-trust layer that keeps bad records out of every number leadership sees.',c:['<b>16</b> campaigns','<b>10</b> channels','<b>11 of 11</b> errors caught'],v:'<div class="viz"><div class="shot"><img src="'+A.boat+'" alt="Business Overview screen of the boAt dashboard with revenue, ROAS, brand search and margin" loading="lazy"></div></div>'},
+    {id:'gharfix',idx:'Digital marketing project',t:'GharFix: walk through a home, then book the fix',s:'A home-services website you explore by scrolling through 225 AI-generated frames, with a working sign-in and booking flow.',c:['<b>225</b> frames','<b>8</b> services','Working <b>booking</b>'],v:'<div class="viz"><div class="shot"><img src="'+A.gharfix+'" alt="GharFix home page: Home Services, On Your Schedule, with service professionals at work" loading="lazy"></div></div>'}
+  ];
+  return ''+
+  '<section class="hero" aria-labelledby="hero-h"><div class="wrap"><div>'+
+    '<div class="kicker"><span class="live" aria-hidden="true"></span>PGDM Marketing at Great Lakes, Gurgaon, graduating 2027</div>'+
+    '<h1 id="hero-h">I find out why people buy, and why they walk away.</h1>'+
+    '<p class="lede">Field research, consumer insight and go-to-market planning. Open to marketing, business research, CRM, digital marketing and B2B sales roles.</p>'+
+    '<div class="ctas"><button class="btn" data-go="work">See my work</button><button class="btn ghost" data-resume>View resume</button></div>'+
+    '<div class="trust"><small>Where I’ve worked and studied</small><b>Häfele India</b><b>TIME</b><b>Great Lakes Gurgaon</b></div></div>'+
+    '<figure class="portrait" style="margin:0"><div class="frame"><img src="'+A.photo+'" alt="Portrait of Aditya Agarwal in a dark suit and red tie" width="720" height="900"></div>'+
+            '<figcaption class="cap"><b>Aditya Agarwal</b>From Jaipur, now in Gurgaon</figcaption></figure>'+
+  '</div></section>'+
+  '<section class="dash" aria-labelledby="dash-h"><div class="wrap"><div class="dash-head"><h2 id="dash-h">My work in numbers</h2><p>From my internship, my first job and my projects</p></div>'+
+    '<div class="tiles">'+tiles.map(function(t){return '<div class="tile"><div class="t">'+t.t+'</div><div class="n">'+t.n+'</div>'+t.v+'<div class="s">'+t.s+'</div></div>';}).join('')+'</div></div></section>'+
+  '<div class="ticker" aria-hidden="true"><div class="row">'+(function(){var w=['Market research','Consumer insights','B2B sales','Go-to-market','Digital marketing','CRM','Competitive analysis','Lead generation','Field research','Business expansion']; var s=w.concat(w).map(function(x){return '<span>'+x+'</span>';}).join(''); return s+s;})()+'</div></div>'+
+  '<section id="work" aria-labelledby="work-h"><div class="wrap work-intro"><h2 id="work-h">My work</h2><p>Four projects, each starting with the same question: what is really stopping the customer?</p></div>'+
+    '<div class="hscroll" id="hs" style="height:'+(slides.length*100)+'vh"><div class="sticky"><div class="track-x" id="hs-track">'+
+    slides.map(function(s,i){return '<article class="slide" aria-labelledby="sl-'+s.id+'"><div class="slide-in"><div><div class="idx">'+(i+1)+' of '+slides.length+', '+s.idx+'</div><h3 id="sl-'+s.id+'">'+s.t+'</h3><p class="sum">'+s.s+'</p><div class="chips">'+s.c.map(function(c){return '<span class="chip">'+c+'</span>';}).join('')+'</div><a class="btn" href="#/work/'+s.id+'">Read the case study</a></div><div>'+s.v+'</div></div></article>';}).join('')+
+    '</div><div class="progress" id="hs-prog">'+slides.map(function(_,i){return '<i class="'+(i?'':'on')+'"></i>';}).join('')+'</div></div></div></section>'+
+  '<section class="sec" id="experience" aria-labelledby="xp-h"><div class="wrap"><div class="sec-h"><h2 id="xp-h">Experience</h2><p>Field sales, research and the customer conversations behind both.</p></div>'+
+    '<div class="xp"><div class="when">Apr – Jun 2026</div><div><h3>Häfele India</h3><div class="role">Market Intelligence Intern, OEM and trade channel</div><ul><li>Mapped 193 firms across 9 clusters in Delhi NCR and Haryana, meeting nearly 140 owners in person.</li><li>Found 4 barriers to sales despite strong demand, and sized about ₹80 lakh a month of under-served spend in 8 accounts.</li><li>Built a 58-account pipeline and a 4-part go-to-market plan for the area team.</li></ul></div><a class="feat" href="#/work/hafele"><small>Featured case study</small><b>When a rule change became a rival’s sales pitch</b><span>The BIS hinge rule, the rumour that followed, and how Häfele can win the channel back.</span></a></div>'+
+    '<div class="xp"><div class="when">Jul – Aug 2024</div><div><h3>TIME</h3><div class="role">Management Trainee</div><ul><li>Generated 175 qualified leads with 30% lead-to-enrolment conversion by counselling students through admissions.</li><li>Structured feedback from 300+ students to find recurring service issues.</li></ul></div><div></div></div>'+
+  '</div></section>'+
+  '<section class="sec alt" aria-labelledby="cap-h"><div class="wrap"><div class="sec-h"><h2 id="cap-h">What I bring to a marketing team</h2><p>Every line below comes from something I have actually done.</p></div>'+
+    '<div class="caps">'+
+      cap('Research and insights',['Survey and interview design','Thematic coding of 20 interviews','Non-parametric tests in Python','Turning field notes into a story'])+
+      cap('B2B sales and expansion',['Market mapping across 9 clusters','Lead qualification and pipeline building','Dealer and channel strategy','Account sizing and prioritisation'])+
+      cap('Digital marketing',['AI-generated visual content','Website and booking journey design','AIDA funnels and trust signals','Campaign ROI and ROAS reading'])+
+      cap('CRM and analytics',['KPI dashboards and decision rules','Customer segmentation (STP, RFM)','Data-quality checks','Lead-to-enrolment funnel tracking'])+
+    '</div>'+
+    '<div class="kit"><div><h3>Methods</h3><div class="chips">'+chips(['Field research','Surveys','Interviews','Thematic coding','Competitor benchmarking','Market sizing'])+'</div></div><div><h3>Frameworks</h3><div class="chips">'+chips(['SWOT','STP','4Ps','Five Forces','AIDA','RFM','5 Whys','Fishbone'])+'</div></div><div><h3>Tools</h3><div class="chips">'+chips(['Excel','Python (pandas, scipy)','KPI dashboards','Google AI Studio','Google Antigravity','Odoo ERP'])+'</div></div></div>'+
+  '</div></section>'+
+  '<section class="sec" aria-labelledby="rec-h"><div class="wrap"><div class="sec-h"><h2 id="rec-h">Education and recognition</h2></div><div class="rec">'+
+    '<div class="col"><h3>Education</h3><dl><dt>PGDM, Marketing</dt><dd>Great Lakes Institute of Management, Gurgaon, 2025–27</dd><dt>BBA</dt><dd>Maharishi Arvind, Jaipur, 2024</dd></dl></div>'+
+    '<div class="col"><h3>Awards</h3><dl><dt>1st rank and Best Candidate</dt><dd>IIT BHU Technex workshop, 2024</dd><dt>Podium finish, two years running</dt><dd>College entrepreneurship event, 2021 and 2022</dd></dl></div>'+
+    '<div class="col"><h3>Certificate and roles</h3><dl><dt>Management Consulting Leadership Program</dt><dd>Skilled Sapiens, 4 weeks, 2025</dd><dt>Member, Strategist</dt><dd>Strategy Club, Great Lakes</dd><dt>Core Committee, Hackfest 2026</dt><dd>Cross-campus hackathon</dd></dl></div>'+
+    '<div class="col"><h3>Beyond class</h3><dl><dt>Toastmasters Club</dt><dd>Public speaking and moderation</dd><dt>NCC, A certificate</dt><dd>Discipline under pressure</dd><dt>Languages</dt><dd>English and Hindi</dd></dl></div>'+
+  '</div></div></section>'+
+  '<section class="sec about" id="about" aria-labelledby="ab-h"><div class="wrap"><div><h2 id="ab-h">A bit about me</h2><p>I grew up in Jaipur in a business family, where dinner-table talk was about customers, prices and what could go wrong. That made me curious about why people choose what they choose.</p><p>My favourite part of any project isn’t the spreadsheet. It’s walking into a shop, talking to the owner, and hearing the real reason behind a “no”.</p></div>'+
+    '<div class="fun"><div><b>On court</b><span>Badminton, where the best shots are the ones your opponent doesn’t see coming.</span></div><div><b>Why marketing</b><span>I’m the friend who wonders why something costs ₹99 and not ₹100.</span></div><div><b>On repeat</b><span>90s music. Kumar Sanu has carried more of my study sessions than I’d like to admit.</span></div><div><b>On stage</b><span>Toastmasters taught me to speak up, which helps when you walk into a shop as a stranger.</span></div></div></div></section>'+
+  '<section class="contact" id="contact" aria-labelledby="ct-h"><div class="wrap"><h2 id="ct-h">Looking for someone who asks “but why?”</h2><p class="big">I’m open to marketing, business research, CRM, digital marketing and B2B sales roles. Happy to walk you through any of these projects.</p>'+
+    '<div class="ways"><a class="way" href="mailto:'+L.email+'"><small>Email</small><b>'+L.email+'</b></a><a class="way" href="tel:'+L.tel+'"><small>Phone</small><b>'+L.phone+'</b></a><a class="way" href="'+L.linkedin+'"'+ext+'><small>LinkedIn</small><b>aditya-agarwal</b></a><button class="way" data-resume><small>Resume</small><b>View and download</b></button></div></div></section>'+
+  '<footer><div class="wrap"><span class="badge"><span class="live" aria-hidden="true"></span>PGDM 2025–27, open to marketing roles</span><span>© 2026 Aditya Agarwal</span></div></footer>';
+}
+function cap(t,items){return '<div class="cap-b"><h3>'+t+'</h3><ul>'+items.map(function(i){return '<li>'+i+'</li>';}).join('')+'</ul></div>';}
+function chips(a){return a.map(function(x){return '<span class="chip">'+x+'</span>';}).join('');}
+
+/* ---------------- CASES ---------------- */
+var ORDER=['hafele','consumer-behaviour','boat','gharfix'];
+var CASES={};
+CASES.hafele={kind:'Teaching case, B2B marketing and channel strategy',title:'Häfele India: when a rule change became a rival’s sales pitch',
+ dek:'A field-based case on brand pull, channel trust and competitive response in North India’s furniture-fittings trade, written from ten weeks of interviews with factories, studios and dealers.',
+ meta:[['Role','Market Intelligence Intern'],['When','April to June 2026'],['Where','Delhi NCR and Haryana'],['Method','193 firms, ~140 met in person']],
+ actions:'<button class="btn" data-dash>View the field dashboard</button><button class="btn ghost" onclick="window.print()">Print or save as PDF</button>',
+ sections:[
+ ['note','About this case','<div class="note"><b>About this case.</b> Written by Aditya Agarwal from his own field research during a market intelligence internship. Client firm names are disguised as Accounts A to H, and spend figures are owners’ own estimates, not audited data. Statements about competitors describe what dealers and firm owners reported in interviews. The case is written for class discussion, not to judge any company’s management.</div>'],
+ ['opening','The line that kept coming back','<p>It was the last week of June 2026, and the owner of a modular-kitchen studio in Ghitorni, the furniture strip on Delhi’s MG Road, was being honest.</p><blockquote>“We use Häfele only when the customer asks for it.”<cite>Studio owner, Ghitorni</cite></blockquote><p>Aditya Agarwal, a market intelligence intern with Häfele India’s OEM and trade team, had heard some version of that sentence dozens of times in ten weeks. Homeowners walked in asking for Häfele by name. Yet when the studio ordered hinges and drawer runners for the cabinet carcass, the box that came in usually said Hettich.</p><p>His area sales manager wanted a plan by month-end. Two questions sat on the table. Where should Häfele focus to grow OEM and trade sales across Delhi NCR and Haryana? And what should it do about a trust problem that, by the dealers’ own account, had started with a government rule and been sharpened by a rival?</p>'],
+ ['company','Häfele in India','<p>Häfele was founded in 1923 by Adolf Häfele and Hermann Funk as a hardware shop for joiners in Germany, and grew into a family-owned global group in furniture fittings and architectural hardware. Its Indian subsidiary started in 2003 in Mumbai.</p><p>In India, Häfele built a premium brand across three overlapping businesses: furniture and kitchen fittings (hinges, drawer runners, lift-up systems), architectural hardware, and later home appliances, sinks and lighting. It sold through offices, design showrooms, franchise shops and a large dealer network, and directly to big furniture makers.</p><p>Two features of that model mattered for this case. First, much of Häfele’s fittings range had historically been sourced from outside India. Second, its strongest pull came from homeowners, architects and designers who knew the brand, rather than from the carpenters and factory buyers who decided what actually went inside the cabinet.</p>'],
+ ['market','The market and the rivals','<p>The demand for fittings in North India came from three very different buyers, each visible in the field data:</p><ul><li><b>OEM factories</b> in belts like IMT Manesar, Ghitorni and Mehrauli: high volumes, buying on price and delivery.</li><li><b>Modular and design studios</b> in Sultanpur, DLF and M3M Urbana: brand-led, selling a finished kitchen to a homeowner.</li><li><b>Small-city kitchen makers and dealers</b> in Rohtak, Hisar, Rewari and Bhiwani: served, if at all, through distributors.</li></ul><p>The main rival was Hettich, another German family company, which had been in India for about 25 years and had built a large manufacturing campus in Indore, with capacity of around 60 million hinges a year. Blum, the Austrian premium brand, competed at the top end. Ozone and other Indian brands competed on value, alongside cheaper unbranded imports.</p>'+
+   '<div class="exhibit"><div class="cap">Exhibit 1. How often each rival came up in Aditya’s field notes</div><div class="sub">Mentions across ~140 in-person conversations</div>'+bars([['Hettich',80,'~80','rose'],['Blum',30,'~30'],['Ozone',10,'~10']],80)+'<div class="src">Source: author’s field notes, April to June 2026.</div></div>'],
+ ['rule','The rule change','<p>On 21 March 2025, the Department for Promotion of Industry and Internal Trade issued the Hinges (Quality Control) Order, 2025. From 1 July 2025, hinges, including cabinet hinges under IS 18297:2023, could not be made, sold, imported or stocked in India without the BIS mark. The rule applied to everyone. Its effect did not.</p><p>A brand with certified Indian factories could keep shipping. A brand that relied more on imported lines had to get certified supply in place first. For Häfele, that meant a short supply gap in some hinge lines during the changeover.</p>'+
+   '<div class="exhibit"><div class="cap">Exhibit 2. From a rule to a rumour</div><div class="timeline" style="margin-top:14px"><div><b>Mar 2025</b>Hinges order issued</div><div><b>Jul 2025</b>BIS mark becomes compulsory</div><div><b>Late 2025</b>Short supply gap in some Häfele lines</div><div><b>Then</b>“Häfele doesn’t make its own hinges” spreads</div><div><b>Mar 2026</b>Häfele starts local production in Maharashtra</div></div><div class="src">Sources: DPIIT Hinges (Quality Control) Order, 2025; Häfele India announcement on local production; dealer interviews.</div></div>'],
+ ['pitch','The pitch that followed','<p>In Ghitorni, Sultanpur and Sikanderpur, dealers told Aditya the same story. During the gap, sales representatives of a rival brand, most often named as Hettich, had told shops a simple line:</p><blockquote>“Häfele doesn’t make its own hinges.”<cite>As reported by dealers in three markets</cite></blockquote><p>The line worked because it mixed something true with something feared. It was true that Häfele had imported much of its range. The fear it planted was about reliability: would stock be there next month, and were the hinges genuine? For a carpenter who has to finish a kitchen on time, that doubt was enough. Shops defaulted to the brand that was in stock and made in India.</p><p>Häfele did respond. In March 2026 it began operations at a local production setup in Maharashtra under the Make in India programme. But in the shops Aditya visited three months later, few owners had heard about it.</p>'],
+ ['field','What the field study found','<p>Aditya mapped 193 firms across 9 clusters, from Gurgaon to Rohtak. He met nearly 140 owners in person and covered the rest by phone and through Häfele’s own account lists. For each firm he logged the business type, brands used, rough monthly hardware spend, complaints and whether it was an existing customer, a new contact or a prospect.</p>'+
+   '<div class="exhibit"><div class="cap">Exhibit 3. Who he met</div><div class="sub">Firms mapped per cluster</div>'+bars(CLUSTERS,50)+'<div class="grid2" style="margin-top:18px"><div class="box"><b>Firm type (where taggable)</b>60 studios, 23 dealers, 12 factories</div><div class="box"><b>Relationship</b>34 existing customers, 29 new, 29 prospects</div></div><div class="src">Source: author’s field sheet of 193 firms.</div></div>'+
+   '<p>Demand was not the problem. Four other things were.</p>'+
+   '<div class="exhibit"><div class="cap">Exhibit 4. The four problems, in the owners’ words</div><div class="tbl-wrap"><table><thead><tr><th>Problem</th><th>What it looked like</th><th>What owners said</th></tr></thead><tbody>'+
+   '<tr><td><b>Price</b></td><td>Häfele priced above Hettich; big factories bought Häfele through vendors to save cost</td><td>“Ready to switch, but price is the pain.”</td></tr>'+
+   '<tr><td><b>No support</b></td><td>No dealer, technician or visits in smaller cities</td><td>“No dealer near us. No technician. Nobody from Häfele ever called.”</td></tr>'+
+   '<tr><td><b>Trust</b></td><td>The supply gap, and the rumour that followed</td><td>“Häfele doesn’t make its own hinges.” (reported)</td></tr>'+
+   '<tr><td><b>Dealers</b></td><td>Distributors from Hisar and Delhi undercutting each other in Rohtak; late quotes</td><td>A Manesar factory said late quotes had forced it to cut production.</td></tr>'+
+   '</tbody></table></div></div>'+
+   '<h3>Where Häfele was already winning</h3><ul><li>A studio that visited a Häfele design centre now uses Häfele for about 65% of its fittings.</li><li>The one firm that received regular Häfele training sessions for its fitters said it bought more from Häfele than from anyone else.</li><li>A hotel-interiors contractor fitting out a five-star property bought ₹1–2 crore a year from Häfele, because the brand stood behind the project.</li></ul>'],
+ ['money','What was at stake','<p>Eight accounts alone reported spending about ₹80 lakh a month on hardware, mostly with rivals (the owners’ estimates added up to between ₹77 and ₹90 lakh). Winning 20–25% of that would be worth about ₹2 crore a year, before counting any dormant accounts that came back.</p>'+
+   '<div class="exhibit"><div class="cap">Exhibit 5. Under-served monthly hardware spend, top 8 accounts (₹ lakh)</div><div class="sub">As owners told it; directional, not audited</div>'+bars(SPEND,27.5,'gold')+'<div class="src">Source: author’s interviews. Account names disguised.</div></div>'+
+   '<h3>Rohtak: the market nobody visited</h3><p>Rohtak showed the cost of absence most clearly. Owners said no dealer, technician or Häfele representative had ever called. Yet one firm there ordered ₹25–30 lakh of hardware a month, another had placed a ₹5 lakh order for Quadro drawer systems, a third wanted 100 sets, and one builder was fitting more than 160 flats. The market was unserved, not dead.</p>'],
+ ['decision','The decision','<p>Sitting with his notes, Aditya could see four broad paths for the area team.</p>'+
+   '<div class="exhibit"><div class="cap">Exhibit 6. The options</div><div class="tbl-wrap"><table><thead><tr><th>Option</th><th>For</th><th>Against</th></tr></thead><tbody>'+
+   '<tr><td><b>A. Cut list prices</b> to match the rival</td><td>Fast; answers the top complaint</td><td>Erodes the premium brand; starts a price war against a rival with large local capacity</td></tr>'+
+   '<tr><td><b>B. Push dealers harder</b> with schemes and targets</td><td>Quick reach, low effort</td><td>Doesn’t fix trust or support; may worsen undercutting</td></tr>'+
+   '<tr><td><b>C. Wait</b> for local production to change minds</td><td>Costs nothing now</td><td>The rumour hardens; accounts are lost in the meantime</td></tr>'+
+   '<tr><td><b>D. A segmented go-to-market plan</b></td><td>Fixes each buyer’s real problem; protects the brand</td><td>Needs coordination and sales effort; slower to show results</td></tr>'+
+   '</tbody></table></div></div>'+
+   '<h3>Questions for discussion</h3><ol class="qs"><li>Why did a rule that applied to every brand hurt Häfele more than its main rival?</li><li>Was the rival’s message an attack on the product or on trust? How should a premium brand answer it without sounding defensive?</li><li>Using Exhibits 3 to 5, which segment would you go after first, and why?</li><li>Should Häfele cut price? What else can change the price a buyer actually pays?</li><li>Write a 90-day plan for the area sales manager. What would you measure each month?</li><li>What does Rohtak tell you about the cost of not being present in smaller cities?</li></ol>'],
+ ['plan','Author’s recommendation','<p>Aditya recommended Option D: keep the premium position, and fix what blocks each type of buyer. His target was to win 20–25% of the ₹75–85 lakh a month in the top 8 accounts, about ₹2 crore a year.</p>'+
+   '<div class="exhibit"><div class="cap">Exhibit 7. Diagnose: SWOT</div><div class="grid2" style="margin-top:12px"><div class="box"><b>Strengths</b><ul><li>Customers ask for it by name</li><li>Full range: fittings, sinks, appliances</li><li>Design centres convert studios</li></ul></div><div class="box"><b>Weaknesses</b><ul><li>Priced above the main rival</li><li>Import-dependent, exposed by the BIS rule</li><li>Weak dealer control; absent in small cities</li></ul></div><div class="box"><b>Opportunities</b><ul><li>~₹80L a month in 8 under-served accounts</li><li>58 new and prospect accounts</li><li>New India production to point to</li></ul></div><div class="box"><b>Threats</b><ul><li>A rival with ~60M hinges a year made locally</li><li>The rumour, if left unanswered</li><li>Fakes and further rule changes</li></ul></div></div></div>'+
+   '<div class="exhibit"><div class="cap">Exhibit 8. Target: who to go after, and how</div><div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>What they told me</th><th>What Häfele offers</th><th>How to reach them</th></tr></thead><tbody>'+
+   '<tr><td><b>Big factories</b><br>Manesar, Ghitorni, Mehrauli</td><td>“Price too high.” “Quotes come late.”</td><td>An OEM programme: volume-slab rates, a price locked for 6–12 months, guaranteed stock of fast movers</td><td>One key-account manager for the top ~15 factories</td></tr>'+
+   '<tr><td><b>Design studios</b><br>Sultanpur, DLF, M3M Urbana</td><td>Buy Häfele sinks and appliances, but a rival inside the cabinet</td><td>Design-centre visits, sample kits, a “Genuine Häfele fitted” card for the homeowner</td><td>Win the designer and architect; the order follows</td></tr>'+
+   '<tr><td><b>Small-city makers</b><br>Rohtak, Hisar, Rewari, Bhiwani</td><td>“No dealer, no technician, nobody ever called.”</td><td>Starter packs, one fixed price list, a local technician</td><td>One authorised dealer per city, plus a WhatsApp catalogue</td></tr>'+
+   '</tbody></table></div><p style="font-family:var(--display);font-size:15.5px;margin:14px 0 0"><b>Positioning:</b> premium, reliable and fully supported: the whole kitchen, not the cheapest hinge. <b>Skip:</b> buyers who choose only on lowest price.</p></div>'+
+   '<h3>The four moves</h3><ol><li><b>Price the buyer actually pays.</b> Keep list prices; offer volume rates locked for 6–12 months to big buyers.</li><li><b>On-site fitter training</b> for large clients, on the exact products in their projects. Carpenters decide the brand on site.</li><li><b>End the rumour loudly</b> where it spread: BIS certificates at every counter, proof of local production, and design-centre visits. The message: “Genuine. German. Made by Häfele.”</li><li><b>One dealer per city, one price list,</b> and a 48-hour rule for quotes, so dealers stop undercutting each other.</li></ol>'+
+   '<div class="exhibit"><div class="cap">Exhibit 9. Roadmap and how to know it’s working</div><div class="grid2" style="margin-top:12px"><div class="box"><b>0–3 months: fix</b>One price list; 48-hour quotes; call on the top 8 accounts; shortlist a Rohtak dealer</div><div class="box"><b>3–6 months: win</b>Launch the OEM programme in Manesar and Ghitorni; design-centre visits for studios; Rohtak dealer and technician live</div><div class="box"><b>6–12 months: scale</b>Copy the Rohtak model to Hisar, Bhiwani and Rewari; designer and architect programme; cross-sell fittings to appliance buyers</div><div class="box"><b>Measures</b>Share of wallet in the top 8 accounts; dormant accounts reactivated; quote time under 48 hours; zero price gap between dealers; 58 leads turned into buyers</div></div></div>'],
+ ['learned','What I learned','<p>The biggest lesson was that a market can look like it has a demand problem when it really has an execution problem. Nobody I met disliked the product. They disliked waiting, not knowing who to call, and paying more without a reason.</p><p>The second lesson was about trust. A single sentence, repeated by the right people at the right moment, did more damage than any price difference. Answering it needs proof in the places it spread, not a national advertisement.</p>'],
+ ['dashboard','The original field dashboard','<p>This is the three-page dashboard Aditya built from his field sheet. Client firm names are disguised in this public version.</p><div class="dash-view">'+[1,2,3].map(function(i){return '<button data-dashpage="'+i+'" aria-label="Open dashboard page '+i+' full size"><img src="'+A['d'+i]+'" alt="Häfele field dashboard, page '+i+' of 3" loading="lazy"></button>';}).join('')+'</div>'],
+ ['sources','Sources','<ul style="font-family:var(--display)"><li>Author’s field sheet and interview notes, April to June 2026.</li><li>Department for Promotion of Industry and Internal Trade, Hinges (Quality Control) Order, 2025 (issued 21 March 2025, in force from 1 July 2025).</li><li>Häfele India company information and its announcement on local production in Maharashtra.</li><li>Hettich India announcements on its Indore manufacturing campus.</li></ul>']
+ ], tools:'Field interviews, Excel field sheet, SWOT, STP, 4Ps, competitor benchmarking'};
+
+CASES['consumer-behaviour']={kind:'Research project, Consumer Behaviour, Great Lakes',title:'Why shoppers walk into a store and leave without buying',
+ dek:'A mixed-method study of the last few minutes of an offline purchase: what breaks the decision, who shoppers trust, and what stores can do about it.',
+ meta:[['Team','Group of 6'],['Method','41 surveys, 20 interviews'],['Analysis','Thematic coding, Python'],['Course','Consumer Behaviour']],actions:'',
+ sections:[
+ ['overview','Overview','<p>A shopper who walks into a store already wants something. So when they leave empty-handed, the store has lost a sale it was close to making. We set out to find what breaks the decision in those last few minutes.</p>'],
+ ['method','How we studied it','<ul><li><b>Survey:</b> 41 responses after a screening question; 30 had recently left a store without buying. People rated 8 reasons for leaving and 6 sources of trust on a 1–7 scale.</li><li><b>Interviews:</b> 20 shoppers, coded in three rounds: open (label every idea), axial (group them) and selective (find the central idea).</li><li><b>Statistics:</b> non-parametric tests in Python (Friedman, Wilcoxon, Spearman, Kruskal-Wallis, Mann-Whitney U), with a Bonferroni correction because we ran many tests.</li></ul>'],
+ ['findings','What we found','<div class="exhibit"><div class="cap">Why people left (average, 1–7 scale)</div><div class="sub">The top three are almost tied</div>'+bars(BARRIERS.map(function(b,i){return [b[0],b[1],b[1].toFixed(2),i<3?'gold':''];}),4.17)+'</div><div class="exhibit"><div class="cap">Who shoppers trust (average, 1–7 scale)</div><div class="sub">The salesperson came last, significantly below every other source</div>'+bars(TRUST.map(function(t){return [t[0],t[1],t[1].toFixed(2),t[3]];}),5.32)+'</div><ul><li><b>75.6%</b> later bought the same item online, at least occasionally.</li><li>No single reason reliably predicted that switch after correction, and we reported that honestly.</li></ul>'],
+ ['stories','What the interviews added','<ul><li><b>Price meant value:</b> one shopper left over a ₹1,500 gap that didn’t feel justified.</li><li><b>Availability meant the exact variant:</b> the right shirt, but not in their size and colour.</li><li><b>Help, not pressure:</b> an air-fryer shopper asked which to buy and was told “both are good”, so she left.</li><li><b>Leaving isn’t losing:</b> people bought online, elsewhere, or later.</li></ul>'],
+ ['recs','What we recommended','<ol><li>Make the store price feel worth it: bundles, clear value, selective price matching.</li><li>Track stock at the exact size, colour and model level.</li><li>Turn staff into decision helpers who ask about the need first.</li><li>Bring reviews and comparisons into the store.</li><li>If it’s not in stock, deliver it home.</li></ol>'],
+ ['limits','Limitations','<p>A small, mostly 18–24 convenience sample, self-reported memories, and one point in time. The results show patterns, not figures for all shoppers.</p>'],
+ ['learned','What I learned','<p>Numbers tell you what matters; stories tell you why. The survey ranked price first, but only the interviews showed it was about value, not cheapness. The store doesn’t lose to online. It has to earn the last step.</p>']
+ ], tools:'Survey design, interviews, thematic coding, Python (pandas, scipy, matplotlib)'};
+
+CASES.boat={kind:'Analytics project, Marketing and Retail Analytics',title:'A decision system for boAt’s marketing spend',
+ dek:'A live dashboard that tells managers where marketing money works, where it’s wasted, and whether the numbers can be trusted.',
+ meta:[['Type','Course project'],['Data','4,500+ records, FY2026'],['Scope','10 channels, 16 campaigns'],['Built with','Google AI Studio, React']],
+ actions:'<a class="btn" href="'+L.boat+'"'+ext+'>Open the live dashboard</a>',
+ sections:[
+ ['overview','Overview','<p>boAt spends on IPL sponsorships, celebrities and digital ads, and sells on Amazon, Flipkart, its own site, Croma and more. But spend and sales are recorded by different teams, so leadership doesn’t trust the revenue number, and budget calls end up on gut feel.</p><div class="shot" style="margin:20px 0"><img src="'+A.boat+'" alt="boAt dashboard Business Overview screen" loading="lazy"></div>'],
+ ['root','Finding the root cause','<p>Using 5 Whys and a Fishbone, the problem traced back to <b>data entry</b>: nothing was tagged the same way, so nothing could be compared. So the system tags every rupee spent and earned by business unit, location, channel, product and month.</p>'],
+ ['kpis','What it tracks','<ul><li><b>Revenue growth</b> against target</li><li><b>Return on ad spend (ROAS):</b> rupees back for every rupee spent</li><li><b>Brand strength</b> through branded search</li><li><b>Channel margin</b> after platform fees</li></ul>'],
+ ['calls','What it decided','<div class="exhibit"><div class="cap">Campaign calls reached by the rules alone</div><div class="tbl-wrap"><table><thead><tr><th>Campaign</th><th>ROI</th><th>Call</th></tr></thead><tbody><tr><td>IPL 2026 sponsorship</td><td>+139%</td><td><b>Increase budget</b></td></tr><tr><td>Smartwatch launch</td><td>+123%</td><td><b>Increase budget</b></td></tr><tr><td>Diwali influencer push</td><td>+80%</td><td><b>Renew</b></td></tr><tr><td>Creator collaborations</td><td>+12%, swinging</td><td><b>Investigate</b></td></tr><tr><td>Bollywood endorsement</td><td>−20%</td><td><b>Cut</b></td></tr><tr><td>Streaming tie-in</td><td>−37%</td><td><b>Cut</b></td></tr></tbody></table></div></div><p>The early-warning screen also caught a familiar pattern: in the second half, spend grew 49% while revenue grew 38%.</p>'],
+ ['trust','The data-trust layer','<p>We planted 12 errors, such as duplicates, fake IDs and a negative revenue. The checks caught all 11 real ones, let one valid zero-spend entry through, and kept every flagged record out of the business numbers. Revenue is also calculated two separate ways, and the two must match.</p>'],
+ ['data','About the data','<p>The data is synthetic but rule-based: Indian festive seasonality, real channel commission levels, and a separate spend and return path for each campaign. It shows how the system works, not boAt’s real results.</p>'],
+ ['learned','What I learned','<p>Bad decisions usually come from bad data, not bad people. Fix it where the data is entered, and every screen above it gets better.</p>']
+ ], tools:'5 Whys, Fishbone, KPI design, Google AI Studio, React, Recharts, Python'};
+
+CASES.gharfix={kind:'Digital marketing project',title:'GharFix: walk through a home, then book the fix',
+ dek:'A home-services website where the home itself is the menu, with a working sign-in and booking flow.',
+ meta:[['Role','Concept, visuals and build'],['Frames','225, AI-generated'],['Services','8 categories'],['Built with','Antigravity, AI Studio']],
+ actions:'<a class="btn" href="'+L.gharfix+'"'+ext+'>Open the website</a>',
+ sections:[
+ ['overview','Overview','<p>Most home-service sites are a grid of categories that look the same. I wanted a site people would enjoy exploring, so visitors scroll through a house, from the gate to the kitchen, before choosing a service.</p><div class="shot" style="margin:20px 0"><img src="'+A.gharfix+'" alt="GharFix home page" loading="lazy"></div>'],
+ ['built','How I built it','<ol><li>Collected interior references on Pinterest.</li><li>Generated realistic home images with AI.</li><li>Stitched them into one walk-through video.</li><li>Split the video into 225 frames.</li><li>Built the site in Google Antigravity and AI Studio, showing the frame that matches how far you have scrolled.</li></ol><p>It works like a flip-book: each scroll turns one page.</p>'],
+ ['does','What the site does','<ul><li>8 services, each with its own page, prices, what’s included, warranty and FAQs</li><li>Sign up, sign in, and a one-click demo account</li><li>Booking with a date, time slot, address and coupon codes</li><li>Your Bookings: reschedule, cancel and rate</li><li>Support tickets and saved addresses</li></ul><p>I first built the walk-through and service pages, then extended it into a working booking prototype.</p>'],
+ ['marketing','The marketing logic','<ul><li><b>Attention:</b> the walk-through gives people a reason to stay.</li><li><b>Interest and desire:</b> clear prices, what’s included, ratings and a warranty.</li><li><b>Action:</b> the next free slot is ready, and the visit fee is free above ₹999.</li><li><b>Trust:</b> verified professionals, an OTP to start the job, pay after service.</li></ul>'],
+ ['measure','What I’d measure','<p>Scroll depth through the walk-through, visits to a service page, slots chosen, bookings confirmed, coupon redemptions and repeat bookings.</p>'],
+ ['learned','What I learned','<p>Building a product isn’t only writing code. It’s choosing the experience, finding the right tools and fitting them together so the user never notices the seams.</p>']
+ ], tools:'Pinterest, AI image generation, video editing, Google Antigravity, Google AI Studio, HTML, Tailwind, JavaScript'};
+
+function casePage(id){
+  var c=CASES[id]; if(!c) return home();
+  var i=ORDER.indexOf(id), nx=ORDER[(i+1)%ORDER.length], nc=CASES[nx];
+  var secs=c.sections.filter(function(s){return s[0]!=='note';});
+  return '<article><div class="case-top"><div class="wrap"><button class="back" data-home>← Back to all work</button><div class="kind">'+c.kind+'</div><h1>'+c.title+'</h1><p class="dek">'+c.dek+'</p>'+
+    '<div class="meta">'+c.meta.map(function(m){return '<div><small>'+m[0]+'</small><b>'+m[1]+'</b></div>';}).join('')+'</div>'+(c.actions?'<div class="case-actions">'+c.actions+'</div>':'')+'</div></div>'+
+    '<div class="wrap case-body"><nav class="toc" aria-label="On this page">'+secs.map(function(s){return '<a href="#" data-sec="'+s[0]+'">'+s[1]+'</a>';}).join('')+'</nav>'+
+    '<div class="read">'+c.sections.map(function(s){return s[0]==='note'?s[2]:'<section id="s-'+s[0]+'"><h2>'+s[1]+'</h2>'+s[2]+'</section>';}).join('')+
+    '<p style="font-family:var(--display);color:var(--muted);font-size:15px">Tools and methods: '+c.tools+'</p>'+
+    '<a class="next" href="#/work/'+nx+'"><span><small>Next project</small><b>'+nc.title+'</b></span><span aria-hidden="true" style="font-size:40px">›</span></a></div></div></article>';
+}
+
+/* ---------------- ROUTER ---------------- */
+var hsHandler=null;
+function render(){
+  var h=location.hash||'#/'; var m=h.match(/^#\/work\/([\w-]+)/);
+  var app=$('#app');
+  window.removeEventListener('scroll',hsHandler); window.removeEventListener('resize',hsHandler);
+  if(m && CASES[m[1]]){ app.innerHTML=casePage(m[1]); document.title=CASES[m[1]].title.replace(/<[^>]+>/g,'')+' · Aditya Agarwal'; window.scrollTo(0,0); wireCase(); }
+  else { app.innerHTML=home(); document.title='Aditya Agarwal · Marketing, research and consumer insight'; wireHS(); var t=sessionStorage.getItem('aa-go'); if(t){sessionStorage.removeItem('aa-go'); setTimeout(function(){go(t);},50);} else window.scrollTo(0,0); }
+}
+function go(id){ var el=document.getElementById(id); if(el) el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }
+function wireHS(){
+  var hs=$('#hs'), tr=$('#hs-track'); if(!hs) return;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function setMode(){ var stack=reduce||innerWidth<980; hs.classList.toggle('stack',stack); hs.style.height=stack?'auto':(tr.children.length*100)+'vh'; return stack; }
+  hsHandler=function(){ if(setMode()) return; var r=hs.getBoundingClientRect(); var total=hs.offsetHeight-innerHeight+66; var p=Math.min(1,Math.max(0,(-r.top)/Math.max(1,total))); var n=tr.children.length; tr.style.transform='translateX('+(-p*(n-1)*innerWidth)+'px)'; var k=Math.round(p*(n-1)); $$('#hs-prog i').forEach(function(d,i){d.classList.toggle('on',i===k);}); };
+  window.addEventListener('scroll',hsHandler,{passive:true}); window.addEventListener('resize',hsHandler); hsHandler();
+}
+function wireCase(){
+  var links=$$('.toc a');
+  links.forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); var t=document.getElementById('s-'+a.dataset.sec); if(t) t.scrollIntoView({behavior:'smooth'}); }); });
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(l){ l.classList.toggle('on','s-'+l.dataset.sec===en.target.id); }); } }); },{rootMargin:'-30% 0px -60% 0px'}); $$('.read section').forEach(function(s){io.observe(s);}); }
+}
+document.addEventListener('click',function(e){
+  var t=e.target.closest('[data-go],[data-home],[data-resume],[data-dash],[data-dashpage]'); if(!t) return;
+  if(t.dataset.go){ e.preventDefault(); if(/^#\/work/.test(location.hash)){ sessionStorage.setItem('aa-go',t.dataset.go); location.hash='#/'; } else go(t.dataset.go); }
+  else if(t.hasAttribute('data-home')){ sessionStorage.setItem('aa-go','work'); location.hash='#/'; }
+  else if(t.hasAttribute('data-resume')){ e.preventDefault(); openResume(); }
+  else if(t.hasAttribute('data-dash')) openDash(1);
+  else if(t.dataset.dashpage) openDash(+t.dataset.dashpage);
+});
+window.addEventListener('hashchange',render);
+
+/* ---------------- LIGHTBOX ---------------- */
+var lbReturn=null;
+function openLB(title,body,actions){ lbReturn=document.activeElement; $('#lb-title').textContent=title; $('#lb-body').innerHTML=body; $('#lb-actions').innerHTML=(actions||'')+'<button class="x" id="lb-x">Close</button>'; $('#lb').hidden=false; document.body.style.overflow='hidden'; $('#lb-x').focus(); $('#lb-x').onclick=closeLB; }
+function closeLB(){ $('#lb').hidden=true; document.body.style.overflow=''; if(lbReturn&&lbReturn.focus) lbReturn.focus(); }
+$('#lb').addEventListener('click',function(e){ if(e.target.id==='lb') closeLB(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ if(!$('#lb').hidden) closeLB(); else if(!$('#ask').hidden) toggleAsk(false); } });
+function openResume(){ openLB('Resume, Aditya Agarwal','<img src="'+A.resumeImg+'" alt="Aditya Agarwal’s one-page resume">', L.pdfs?'<a class="pill dark" href="'+A.resumePdf+'" download>Download PDF</a>':''); }
+function openDash(p){ openLB('Häfele field dashboard, page '+p+' of 3','<img src="'+A['d'+p]+'" alt="Häfele field dashboard page '+p+'">',(p>1?'<button class="pill" data-dashpage="'+(p-1)+'">Previous</button>':'')+(p<3?'<button class="pill" data-dashpage="'+(p+1)+'">Next</button>':'')+(L.pdfs?'<a class="pill dark" href="'+A.dashPdf+'" download>Download PDF</a>':'')); }
+
+/* ---------------- ASK ---------------- */
+var KB=[
+ [['who','about','yourself','introduce','tell me'],'I’m Aditya Agarwal, a PGDM Marketing student at Great Lakes, Gurgaon (2025–27), from Jaipur. I do field research, consumer insight and go-to-market work, mostly by talking to the people who actually buy.'],
+ [['hafele','häfele','internship','intern'],'At Häfele India (Apr–Jun 2026) I mapped 193 firms across 9 clusters in Delhi NCR and Haryana and met nearly 140 owners in person. Demand was strong, but price, missing support, dealer undercutting and a trust problem blocked sales. <a href="#/work/hafele">Read the full case</a>.'],
+ [['hettich','rival','competitor','rumour','rumor','bis','rule','backstab'],'After the BIS rule for hinges (in force from July 2025), Häfele had a short supply gap. Dealers told me a rival’s reps used it to say “Häfele doesn’t make its own hinges”. My answer: prove it loudly where it spread, with BIS certificates, local production and design-centre visits. <a href="#/work/hafele">See the case</a>.'],
+ [['finding','found','result','insight','money','80','worth'],'The big finding: demand wasn’t the problem, execution was. Eight accounts spent about ₹80 lakh a month, mostly with rivals. Winning 20–25% of that is about ₹2 crore a year.'],
+ [['recommend','plan','strategy','gtm','go-to-market'],'Four moves: volume prices locked for 6–12 months, on-site fitter training, ending the rumour with proof, and one dealer per city with one price list and 48-hour quotes.'],
+ [['consumer','behaviour','behavior','survey','store','retail','abandon'],'In our Consumer Behaviour study (41 surveys, 20 interviews), price, availability and online comparison were the top reasons shoppers left without buying, and salespeople were the least trusted source. <a href="#/work/consumer-behaviour">Read more</a>.'],
+ [['boat','dashboard','roas','campaign','analytics'],'For boAt I built a decision dashboard tracking ROAS, revenue, brand search and channel margin. It made rule-based calls for 16 campaigns and caught 11 of 11 planted data errors. <a href="'+L.boat+'" target="_blank" rel="noopener">Open it live</a>.'],
+ [['gharfix','website','home service','digital','frames'],'GharFix is a home-services website you explore by scrolling through 225 AI-generated frames, then book a service. It has sign-in, booking, rescheduling and support. <a href="'+L.gharfix+'" target="_blank" rel="noopener">Try it</a>.'],
+ [['skill','good at','strength','tools','framework'],'Market research and consumer insight, B2B sales and lead generation, go-to-market planning, digital marketing and campaign analytics, and CRM thinking. Tools: Excel, Python (pandas, scipy), KPI dashboards, Google AI Studio.'],
+ [['role','job','looking','open','hire','position'],'I’m open to marketing, business research, CRM, digital marketing, business expansion and B2B sales roles.'],
+ [['time','first job','leads','sales','b2b'],'At TIME (2024) I generated 175 qualified leads with 30% lead-to-enrolment conversion. At Häfele I built a 58-account pipeline of new and prospect accounts.'],
+ [['contact','email','phone','call','reach','linkedin'],'Email '+L.email+', phone '+L.phone+', or <a href="'+L.linkedin+'" target="_blank" rel="noopener">LinkedIn</a>.'],
+ [['resume','cv'],'You can <a href="#" data-resume>view my resume here</a>.'],
+ [['education','college','great lakes','degree','study'],'PGDM in Marketing at Great Lakes Institute of Management, Gurgaon (2025–27); BBA from Maharishi Arvind, Jaipur (2024).'],
+ [['hobby','hobbies','badminton','music','free time','fun'],'Badminton, and 90s music. Kumar Sanu is a regular on my playlist.'],
+ [['why marketing','marketing','99','100'],'I’m the friend who wonders why something is priced ₹99 and not ₹100. Growing up in a business family, I saw that the best decisions came from understanding the customer.'],
+ [['award','achievement','rank','certificate'],'1st rank and Best Candidate at the IIT BHU Technex workshop (2024), a podium finish at a college entrepreneurship event in 2021 and 2022, and a Management Consulting Leadership Program (2025).']
+];
+var SUGG=['What did you find at Häfele?','What happened with Hettich?','What are your skills?','How can I contact you?'];
+function answer(q){ var s=q.toLowerCase(), best=null, score=0; KB.forEach(function(k){ var n=0; k[0].forEach(function(w){ if(s.indexOf(w)>-1) n+=w.length>3?2:1; }); if(n>score){score=n;best=k[1];} }); return best||'I don’t have an answer for that here. Try asking about Häfele, my projects, skills or how to contact me, or email '+L.email+'.'; }
+function say(t,who){ var d=document.createElement('div'); d.className='msg '+who; if(who==='bot') d.innerHTML=t; else d.textContent=t; $('#ask-log').appendChild(d); $('#ask-log').scrollTop=1e6; }
+function toggleAsk(open){ var p=$('#ask'), b=$('#ask-btn'); if(open===undefined) open=p.hidden; p.hidden=!open; b.setAttribute('aria-expanded',String(open)); if(open){ if(!$('#ask-log').children.length) say('Hi! Ask me anything about Aditya’s work, skills or how to reach him.','bot'); $('#ask-in').focus(); } else b.focus(); }
+$('#ask-btn').addEventListener('click',function(){toggleAsk();});
+$('#ask-sugg').innerHTML=SUGG.map(function(s){return '<button type="button">'+s+'</button>';}).join('');
+$$('#ask-sugg button').forEach(function(b){ b.addEventListener('click',function(){ say(b.textContent,'me'); say(answer(b.textContent),'bot'); }); });
+$('#ask-form').addEventListener('submit',function(e){ e.preventDefault(); var v=$('#ask-in').value.trim(); if(!v) return; say(v,'me'); $('#ask-in').value=''; setTimeout(function(){ say(answer(v),'bot'); },200); });
+$('#ask-log').addEventListener('click',function(e){ var a=e.target.closest('a[href^="#/"]'); if(a) toggleAsk(false); });
+
+render();
+})();
+</script>
+</body>
+</html>

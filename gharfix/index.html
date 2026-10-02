@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>GharFix - Home Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #050505;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+        .scroll-content {
+            position: relative;
+            z-index: 10;
+        }
+        .section {
+            height: 120vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+        body.gf-app-route canvas, body.gf-app-route .overlay, body.gf-app-route #content-container { display: none; }
+        body.gf-app-route { background: #efe7dc; }
+        .section.visible {
+            opacity: 1;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.8) 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <canvas id="canvas"></canvas>
+    <div class="overlay"></div>
+    
+<!-- STITCH CONTENT START -->
+<div class="antialiased flex flex-col font-body-md bg-surface-container-high text-primary-container relative z-20 w-full bg-opacity-100 min-h-screen">
+<div id="site-header" class="sticky top-0 z-50"></div>
+<!-- Main Content -->
+<main id="view-home" class="flex-grow">
+<!-- Hero Section -->
+<section class="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover sepia-[0.2]" src="images/hero.jpg"/>
+<div class="absolute inset-0 bg-primary-container bg-opacity-50 mix-blend-multiply"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-stack-md">
+<h1 class="font-display-lg text-display-lg text-surface-container-high drop-shadow-md">Home Services, On Your Schedule</h1>
+<p class="font-body-lg text-body-lg text-surface-container-high/90 max-w-2xl">Because your time in the city matters.</p>
+<div class="flex gap-4 mt-stack-sm">
+<button data-explore class="bg-primary-container text-surface-container-high px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-[#D9A857] hover:shadow-[0_4px_20px_rgba(217,168,87,0.4)] transition-all duration-300">
+                        Explore Services
+                    </button>
+<div class="bg-surface-container-high/10 backdrop-blur-md text-surface-container-high px-6 py-3 rounded-lg font-label-md text-label-md flex items-center gap-2 border border-surface-container-high/20"><span class="material-symbols-outlined text-[#D9A857]" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">star</span><span class="">4.9 Service Rating</span></div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="w-full bg-[#A8A196] scroll-mt-28">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary-container mb-2 drop-shadow-sm">Our Expertise</h2>
+<p class="font-body-md text-body-md text-primary-container/80 max-w-3xl">
+                    Select from our range of specialized services designed to elevate and maintain your living environment with precision and care.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Side Navigation -->
+<div class="md:col-span-4 flex flex-col gap-base bg-surface-container-high p-stack-md rounded-xl shadow-[0_8px_30px_rgba(43,36,32,0.05)] border border-[#D9A857]/10"><div class="mb-stack-md border-b border-primary-container/10 pb-4"><h3 class="font-headline-md text-headline-md text-primary-container mb-1">Services</h3><p class="font-body-sm text-body-sm text-primary-container/70">Expert Care</p></div><div class="flex flex-col gap-2 overflow-y-auto max-h-[600px] pr-2"><a class="flex items-center justify-between p-3 rounded-lg bg-primary-container text-surface-container-high shadow-md transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-surface-container-high">settings_input_component</span><span class="">E-Appliance</span></div><span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></a><a class="flex items-center justify-between p-3 rounded-lg text-primary-container hover:bg-[#D9A857]/10 hover:text-primary-container transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-primary-container">bolt</span><span class="">Electrician</span></div><span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 text-[#D9A857]">arrow_forward</span></a><a class="flex items-center justify-between p-3 rounded-lg text-primary-container hover:bg-[#D9A857]/10 transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-primary-container">plumbing</span><span class="">Plumber</span></div><span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 text-[#D9A857]">arrow_forward</span></a><a class="flex items-center justify-between p-3 rounded-lg text-primary-container hover:bg-[#D9A857]/10 transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-primary-container">carpenter</span><span class="">Carpenter</span></div><span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 text-[#D9A857]">arrow_forward</span></a><a class="flex items-center justify-between p-3 rounded-lg text-primary-container hover:bg-[#D9A857]/10 transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-primary-container">format_paint</span><span class="">Painting</span></div><span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 text-[#D9A857]">arrow_forward</span></a><a class="flex items-center justify-between p-3 rounded-lg text-primary-container hover:bg-[#D9A857]/10 transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-primary-container">pest_control</span><span class="">Pest &amp; Garden</span></div><span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 text-[#D9A857]">arrow_forward</span></a><a class="flex items-center justify-between p-3 rounded-lg text-primary-container hover:bg-[#D9A857]/10 transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-primary-container">grid_view</span><span class="">Wall Panelling</span></div><span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 text-[#D9A857]">arrow_forward</span></a><a class="flex items-center justify-between p-3 rounded-lg text-primary-container hover:bg-[#D9A857]/10 transition-colors group" data-side href="#/services"><div class="flex items-center gap-3 font-label-sm text-label-sm"><span class="material-symbols-outlined text-[20px] text-primary-container">content_cut</span><span class="">Unisex Salon</span></div><span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 text-[#D9A857]">arrow_forward</span></a></div><button data-viewall class="mt-4 pt-stack-sm w-full border border-primary-container/20 text-primary-container py-3 rounded-lg font-label-md text-label-md hover:bg-primary-container hover:text-surface-container-high transition-colors flex items-center justify-center gap-2">View All Services<span class="material-symbols-outlined text-sm">open_in_new</span></button></div>
+<!-- Bento Grid Display -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/e-appliance.jpg" alt="E-Appliance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvYP7lDXTFfExdQwyqpap45JW0vDwpYnLvA_4AiNxPT8Y242Q4V4GzfOgcSGWy4UaseIPsQcnmM4gbH8IfwB5KcCG7qStuqdL3IjGWi27noi_ZxrmGqNsqIB2K7pSpmQ3t-rG72AbtJCFOi3TEocG-1_f3qkbYyremzRXEG2RiQOpwwukOF2hGioQjHRzzQ0-NNCbaQfqPyYFqOvjil98p9YHgOuxcj3tX-lxNS0pawcMunGZ0OBvQiQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">settings_input_component</span>E-Appliance</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Smart Setup &amp; Repair</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹399 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/electrician.jpg" alt="Electrician" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida/AP1WRLsMa7l-H7lFjvVNRCePRS8PzkVt89Wtm9ouqksl8ho96GFzgvNIDrbEiDgnMUWgNsbKo1C1-vxSXpKdM3hZTUiP40l4cJvnjNM9Iq1mxPFTPLR5wrucpajoAzbQfbw6PwJYuNJBKxtEP-keoWGF4oyLoWZMXsGTu8h4cRuoKzrQj00TcwWqiWwnK8CJyTAEC1-yiGqsPe_o9MLfa8eQnezODR4HfSCBoQPxCUkj8VFZwSFnn45VaOZHUcp7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">bolt</span>Electrician</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Expert Electrical Care</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹299 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/plumber.jpg" alt="Plumber" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida/AP1WRLsMp-6OULNkd6vyYJw0HTsXvQqiCuns1YmUhowK1Sr4D2ziXSjTzcGO4dbCSCiMRBPVK_MonfWG4AQIPvZ4N_X4cfXUSZPVMTsr4wsLLAJ3VMum55ce6zo6VcUe7jhXkleInCZJlwlJpP1OYRoLrmtVv9Dnt-HGuK7XOqYr2iErPLqG1o89F9WilvrLG5aFHdlQcIVWaFjpTofZpEmRN_mjxAA0wughilNnYUEKrlg7EmvEBro-CKhyEZw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">plumbing</span>Plumber</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Modern Plumbing</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹399 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/carpenter.jpg" alt="Carpenter" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF53kUk9ierCCs0sdu9TDFkBBEaLmKRrYhtcQUmYwbvsW-yHIFgPLEZ3Cdf22LTMqtazxlFWh5hj9GY8tdXPCdFM24NXgE8RUgdiPVgVzQ3ZxV4_IdnTYIcEAVyplAJtg9f8cGv6rncNsLuYZibhU0FVL8B2l2sPRuxQQOIrafeK52Vy3YWcxjZDVspqpcHRj5f_UNpnqox1ShC2nHe9vhTlR7J6PMZ8pyGz9TWCRPbasP25IOhUnQKQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">carpenter</span>Carpenter</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Custom Woodwork</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹499 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/painting.jpg" alt="Painting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP7zQaX4u6FcDvdeZ-sUSCU3LzdgVzwVuDb8nBSDNDHur5jaWF6G8Fr7QlrjFQ-RwKE_uk3P9kiIpBeocwh1tuPRVu4kbrk87tyOsgAVHYB2W3Ty6h1VC-AIzoTZVTVtdE3JMwnFjaL10VMbVuWOy7FufXba7o7EYL7BBjeUNMB9BX3zIwhKPs-Zku0OyrwSvXujyOjL3u6JxUEhvLCWxpDW6RQlOLwRo7Ir-nphRiVU_ik6Jfv1_Snw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">format_paint</span>Painting</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Precision Painting</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹499 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/cleaning.jpg" alt="Professional Cleaning" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTBl9H9VvppqsAM6M482wj96QEHRpSQjdewfupui8aAM6NBicB20Gb6W3kHZ6vzIEDF4iR1VUZjF8YL4_qmH0oTcJnhC7AAW0HT2_l8ZDk98ikRAHdPY4yIhYHuAxlTy_OmSBXXZzGWd3J7M60bSv3QwmuSlHlcvfUT0a6EEaS5LzzN7J5EiEe_I0pxCZYiIz8z-oD42zU5NeCjqI6xhgDywY4j0P2mtozZK972y0ELmCW6o-UWmftSw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">pest_control</span>Professional Cleaning</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Professional Cleaning</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹299 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/wall-panelling.jpg" alt="Wall Panelling" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvpyg8DwLpCYAV4SKBCbuGzLRw76XU3dAGdA05sOHxWZpRvzvv5qswIicDMQdFHSnlZDDrHpEWdRBfKN9-z7MBjqLRq_iUCPiA13zsi0uXnIByz7KIFav6g8li0lZxpav8a-cE3anBMlSf6HwTVLRwJyRTTtjLRJtFW85A5uCYJmBPfHvIHBA0EF4fAqZRieSFsBcxBZcL8hgH_wv3HgZYMOuRQYHHDziZl-l2WA71bOrqFu0XP_COcQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">grid_view</span>Wall Panelling</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Modern Textures</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹499 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<div data-card class="relative rounded-xl overflow-hidden group cursor-pointer h-[250px] transition-all duration-[400ms] ease-in-out hover:-translate-y-[15px] shadow-[0_4px_10px_rgba(43,36,32,0.1)] hover:shadow-[0_20px_40px_rgba(43,36,32,0.2)]">
+<img data-fallback="images/services/grooming.jpg" alt="Professional Grooming" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 sepia-[0.1]" src="https://lh3.googleusercontent.com/aida/AP1WRLswnjOUXNDrMaJ-yEbbq8wGWHpKGyBSpm2C0ipg47P32S7tk8rjZic3k62roPkQerUT9UWwnrqTkYlOeUIxn9OGgrC5VD9nvUPHMXqerguvHYZ68FlKa1Gr2OsFM2peIcm_-OX1ZgeRRCO-CFTa5pBzwtdsZV9Epj6e52tPqGwJMd8TJPm1g3jp4_spLv54q65Zn1eH-Q-wIT17OPSqXLxuRDIIGoUYivBcs4_zf3nRfNPXEkigiNJAAfGb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent group-hover:via-[#D9A857]/30 transition-colors duration-500"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full flex flex-col">
+<div class="bg-surface-container-high/90 text-primary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] inline-flex items-center gap-1 mb-1 border border-primary-container/10 self-start shadow-sm"><span class="material-symbols-outlined text-primary-container" style="font-size: 12px;">content_cut</span>Unisex Salon</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-surface-container-high mb-2 drop-shadow-md">Professional Grooming</h3>
+<div class="flex items-center justify-between opacity-0 max-h-0 overflow-hidden translate-y-4 transition-all duration-[400ms] ease-in-out group-hover:max-h-14 group-hover:opacity-100 group-hover:translate-y-0 mt-0 group-hover:mt-2">
+<span class="text-surface-container-high font-label-md text-label-md drop-shadow-md">₹499 onwards</span>
+<button type="button" class="bg-primary-container text-surface-container-high px-4 py-2 rounded font-label-sm text-label-sm hover:bg-[#D9A857] hover:shadow-[0_0_10px_rgba(217,168,87,0.5)] transition-all">Book Now</button>
+</div></div></div></div></div></div></section></main>
+<div id="view-app" class="hidden flex-grow"></div>
+<footer class="bg-primary-container text-surface-container-high py-8 border-t border-[#D9A857]/20">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<div class="flex flex-wrap justify-center gap-6 mb-3 font-label-sm text-label-sm"><a href="#/services" class="hover:text-[#D9A857]">Services</a><a href="#/bookings" class="hover:text-[#D9A857]">Your Bookings</a><a href="#/support" class="hover:text-[#D9A857]">Support</a><a href="#/account" class="hover:text-[#D9A857]">Profile</a></div>
+<p class="font-body-sm text-body-sm opacity-80">© 2026 GharFix. All rights reserved.</p>
+</div>
+</footer>
+</div>
+<!-- STITCH CONTENT END -->
+
+    <div class="scroll-content" id="content-container">
+        
+        <!-- Section 1: Expert Care -->
+        <div class="section visible">
+            <div class="w-full max-w-6xl mx-auto p-8 md:p-14 lg:p-16 flex flex-col justify-between h-[80vh]">
+                <div class="grid grid-cols-12 gap-4 md:gap-6 w-full flex-1 relative z-10">
+                    <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full py-1">
+                        <div class="font-mono text-xs tracking-wider text-neutral-300 leading-relaxed uppercase">
+                            <p class="m-0 font-medium text-white">EVERY HOME</p>
+                            <p class="m-0 text-neutral-400 font-normal">DESERVES EXPERT CARE.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-span-12 md:col-span-7 flex flex-col justify-between h-full py-1 md:pl-10 md:border-l border-neutral-500/50">
+                        <div class="text-xs tracking-[0.22em] font-semibold uppercase text-neutral-300 flex items-center gap-1.5 mb-10 md:mb-0">
+                            <span>DOMESTIC SERVICES</span>
+                            <span class="text-neutral-500 font-light font-mono">/</span>
+                            <span class="text-neutral-400 font-normal">2026</span>
+                        </div>
+                        <div class="my-auto py-8">
+                            <h1 class="text-6xl md:text-8xl font-medium tracking-tighter text-white leading-[0.9] lowercase">
+                                <span class="block">expert</span>
+                                <span class="block text-neutral-300 font-normal opacity-95">care</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-md flex flex-col gap-4">
+                            <p class="text-sm md:text-base text-neutral-300 font-light leading-relaxed lowercase text-justify md:text-left tracking-wide drop-shadow-md">
+                                book trusted professional at your shedule in minutes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Lumiere -->
+        <div class="section">
+            <div class="w-full max-w-6xl mx-auto p-8 md:p-14 lg:p-16 flex flex-col justify-between h-[80vh]">
+                <div class="grid grid-cols-12 gap-4 md:gap-6 w-full flex-1 relative z-10">
+                    <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full py-1">
+                        <div class="font-mono text-xs tracking-wider text-neutral-300 leading-relaxed uppercase">
+                        </div>
+
+                    </div>
+                    <div class="col-span-12 md:col-span-7 flex flex-col justify-between h-full py-1 md:pl-10 md:border-l border-neutral-500/50">
+                        <div class="text-xs tracking-[0.22em] font-semibold uppercase text-neutral-300 flex items-center gap-1.5 mb-10 md:mb-0">
+                            <span>PROVENCE</span>
+                            <span class="text-neutral-500 font-light font-mono">/</span>
+                            <span class="text-neutral-400 font-normal">2025</span>
+                        </div>
+                        <div class="my-auto py-8">
+                            <h1 class="text-6xl md:text-7xl font-medium tracking-tighter text-white leading-[0.9] lowercase">
+                                <span class="block">step inside.</span>
+                                <span class="block text-neutral-300 font-normal opacity-95 text-4xl mt-2">everything your home needs is here.</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-md flex flex-col gap-4">
+                            <p class="text-sm md:text-base text-neutral-300 font-light leading-relaxed lowercase text-justify md:text-left tracking-wide drop-shadow-md">
+                                whether it's fixing a leaking tap, deep cleaning your home, servicing your ac, or giving yourself a relaxing salon experience, we connect you with verified professionals who care about quality as much as you do.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Solenne -->
+        <div class="section">
+            <div class="w-full max-w-6xl mx-auto p-8 md:p-14 lg:p-16 flex flex-col justify-between h-[80vh]">
+                <div class="grid grid-cols-12 gap-4 md:gap-6 w-full flex-1 relative z-10">
+                    <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full py-1">
+                        <div class="font-mono text-xs tracking-wider text-neutral-300 leading-relaxed uppercase">
+                            <p class="m-0 font-medium text-white">A HEAVEN OF</p>
+                            <p class="m-0 text-neutral-400 font-normal">COMFORT & CARE</p>
+                        </div>
+
+                    </div>
+                    <div class="col-span-12 md:col-span-7 flex flex-col justify-between h-full py-1 md:pl-10 md:border-l border-neutral-500/50">
+                        <div class="text-xs tracking-[0.22em] font-semibold uppercase text-neutral-300 flex items-center gap-1.5 mb-10 md:mb-0">
+                            <span>EVERY ROOM HAS A STORY</span>
+                            <span class="text-neutral-500 font-light font-mono">/</span>
+                            <span class="text-neutral-400 font-normal">2026</span>
+                        </div>
+                        <div class="my-auto py-8">
+                            <h1 class="text-6xl md:text-8xl font-medium tracking-tighter text-white leading-[0.9] lowercase">
+                                <span class="block">every corner of</span>
+                                <span class="block text-neutral-300 font-normal opacity-95 text-5xl mt-2">your home matters</span>
+                            </h1>
+                        </div>
+                        <div class="max-w-md flex flex-col gap-4">
+                            <p class="text-sm md:text-base text-neutral-300 font-light leading-relaxed lowercase text-justify md:text-left tracking-wide drop-shadow-md">
+                                Something broken? Something not working right? Our professionals repair and restore your home — quickly, reliably, and without the hassle
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h-[10vh]"></div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const context = canvas.getContext("2d");
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const frameCount = 225;
+        const currentFrame = index => (
+            `frames/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`
+        );
+
+        const images = [];
+
+        for (let i = 0; i < frameCount; i++) {
+            const img = new Image();
+            img.src = currentFrame(i);
+            images.push(img);
+        }
+
+        function render(index) {
+            const img = images[index];
+            if (img && img.complete && img.naturalWidth !== 0) {
+                const hRatio = canvas.width / img.width;
+                const vRatio = canvas.height / img.height;
+                const ratio = Math.max(hRatio, vRatio);
+                const centerShift_x = (canvas.width - img.width*ratio) / 2;
+                const centerShift_y = (canvas.height - img.height*ratio) / 2;  
+                context.clearRect(0,0,canvas.width, canvas.height);
+                context.drawImage(img, 0,0, img.width, img.height,
+                                   centerShift_x,centerShift_y,img.width*ratio, img.height*ratio);
+            }
+        }
+
+        images[0].onload = () => {
+            render(0);
+        };
+
+        const sections = document.querySelectorAll('.section');
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollContainer = document.getElementById('content-container');
+            const containerTop = scrollContainer.offsetTop;
+            
+            // Calculate how far we've scrolled into the ezgif section
+            let scrolledIntoContainer = scrollTop - containerTop;
+            
+            const maxScrollTop = scrollContainer.scrollHeight - window.innerHeight;
+            let scrollFraction = maxScrollTop <= 0 ? 0 : Math.min(1, Math.max(0, scrolledIntoContainer / maxScrollTop));
+            
+            const frameIndex = Math.min(
+                frameCount - 1,
+                Math.floor(scrollFraction * frameCount)
+            );
+            
+            // Only update animation if we have scrolled into the ezgif section (or are at frame 0)
+            if (scrolledIntoContainer >= 0 || frameIndex === 0) {
+                requestAnimationFrame(() => render(frameIndex));
+            }
+
+            // Fade sections based on scroll
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                const sectionCenter = rect.top + rect.height / 2;
+                const viewportCenter = window.innerHeight / 2;
+                
+                // If section center is within 50% of viewport height from the center, show it
+                if (Math.abs(sectionCenter - viewportCenter) < window.innerHeight * 0.6) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollContainer = document.getElementById('content-container');
+            const containerTop = scrollContainer.offsetTop;
+            let scrolledIntoContainer = scrollTop - containerTop;
+            
+            const maxScrollTop = scrollContainer.scrollHeight - window.innerHeight;
+            let scrollFraction = maxScrollTop <= 0 ? 0 : Math.min(1, Math.max(0, scrolledIntoContainer / maxScrollTop));
+            
+            const frameIndex = Math.min(
+                frameCount - 1,
+                Math.floor(scrollFraction * frameCount)
+            );
+            render(frameIndex);
+        });
+    </script>
+
+    <script>
+        // Image safety net: if a remotely hosted image fails to load, show the local copy instead.
+        document.querySelectorAll('img[data-fallback]').forEach(function (img) {
+            var useLocal = function () { if (img.getAttribute('src') !== img.dataset.fallback) img.src = img.dataset.fallback; };
+            img.addEventListener('error', useLocal);
+            if (img.complete && img.naturalWidth === 0) useLocal();
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
